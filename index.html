@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/head.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css">
+<script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="headerinner">
+		<ul class="headernav">
+			<li class="logo">
+				<!---<img src="" alt="" />--->
+			</li>
+			<li><a href="#">Home</a></li>
+			<li><a href="#" >投资咨询</a></li>
+			<li><a href="#">培训课程</a></li>
+			<li><a href="#" >在线体验</a></li>
+			<li><a href="#" >about</a></li>
+			<li class="search">
+				<a class="search_pic"></a>
+			</li>
+			<li class="list">
+				<a></a>
+			</li>
+		</ul>
+		<!-- 搜索 -->
+		<form action="">
+			<div class="search_main">
+				<button class="search_btn" type="submit"></button>
+				<input class="search_text" type="text" placeholder="搜索">
+				<span class="close_btn"></span>
+			</div>
+		</form>
+		<!-- 会员登录 -->
+		<div class="member">
+			<p>会员中心</p>
+			<ul>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="login.html">登录</a>
+				</li>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="register.html">新会员注册</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+$(function(){
+	/*搜索*/
+	$(".search_pic").click(function(){
+		$(".headernav").fadeOut(500);
+		$(".search_main").fadeIn(1000);
+	});
+	$(".search_main .close_btn").click(function(){
+		$(".search_main").fadeOut(500);
+		$(".headernav").fadeIn(1000);
+	});
+	/*登录*/
+	$(".list a").click(function(){
+		$(".member").slideToggle(500);
+	});
+
+});
+</script>
+
+   
+
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+<table
+  data-toggle="table"
+  data-url="data.json"
+  data-pagination="true"
+  data-search="true">
+  <thead>
+    <tr>
+            <th data-field="name">企业名称</th>
+            <th data-field="name1">投递时间</th>
+            <th data-field="name2">笔试时间</th>
+            <th data-field="name3">已投</th>
+            <th data-field="name4">行测</th>
+            <th data-field="name5">申论</th>
+            <th data-field="name6">英语</th>
+            <th data-field="name7">专业课</th>  
+    </tr>
+  </thead>
+</table>
+</body>
+</html>
