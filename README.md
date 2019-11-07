@@ -1,4 +1,4 @@
-# JobFinder
+# JobFinder [点我进入招聘信息页面](https://qyc0129.github.io/)
 This is A Job Finder
 ---
 - 会在wiki上更新学习路线
